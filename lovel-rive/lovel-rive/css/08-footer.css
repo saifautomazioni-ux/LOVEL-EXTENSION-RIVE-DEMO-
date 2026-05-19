@@ -1,0 +1,75 @@
+/* ============================================
+   08-footer.css
+   Footer con info contatti
+   ============================================ */
+
+footer {
+  padding: 5rem 2rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--line);
+  position: relative;
+  z-index: 2;
+  background: var(--bg);
+}
+
+footer .script-name {
+  font-family: var(--font-script);
+  font-weight: 700;
+  font-size: 4.5rem;
+  color: var(--gold);
+  margin-bottom: .5rem;
+  line-height: 1;
+}
+
+footer .tag {
+  font-family: var(--font-display);
+  font-size: .75rem;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 2.5rem;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.footer-info div {
+  font-style: italic;
+  color: var(--text-dim);
+  font-size: 1.05rem;
+}
+
+.footer-info strong {
+  display: block;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-size: .7rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .4rem;
+}
+
+footer .copy {
+  font-size: .85rem;
+  color: var(--text-dim);
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 3rem 1.2rem 2rem;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+}

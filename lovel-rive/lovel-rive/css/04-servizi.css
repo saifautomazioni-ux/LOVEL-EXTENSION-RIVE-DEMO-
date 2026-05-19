@@ -1,0 +1,102 @@
+/* ============================================
+   04-servizi.css
+   Sezione Servizi & Prezzi (4 card)
+   ============================================ */
+
+.servizi {
+}
+
+.servizi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .servizi-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .servizio {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.servizio {
+  background: rgba(17, 17, 17, .6);
+  border: 1px solid var(--line);
+  padding: 2.5rem 2rem;
+  transition: all .5s;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.servizio::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width .6s;
+}
+
+.servizio:hover {
+  border-color: rgba(212, 175, 106, .4);
+  transform: translateY(-4px);
+}
+
+.servizio:hover::before {
+  width: 100%;
+}
+
+.servizio h3 {
+  font-family: var(--font-script);
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: .3rem;
+}
+
+.servizio .sub {
+  font-family: var(--font-display);
+  font-size: .7rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 1.8rem;
+}
+
+.servizio ul {
+  list-style: none;
+}
+
+.servizio li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: .7rem 0;
+  border-bottom: 1px dashed rgba(212, 175, 106, .1);
+  font-size: 1.1rem;
+}
+
+.servizio li:last-child {
+  border-bottom: none;
+}
+
+.servizio .price {
+  color: var(--gold);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.servizio .note {
+  margin-top: 1.2rem;
+  font-size: .95rem;
+  font-style: italic;
+  color: var(--text-dim);
+}

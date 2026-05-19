@@ -1,0 +1,71 @@
+/* ============================================
+   01-nav.css
+   Navigation bar fissa in alto
+   ============================================ */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 1.4rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  background: rgba(8, 8, 8, .7);
+  border-bottom: 1px solid var(--line);
+}
+
+nav .brand {
+  font-family: var(--font-script);
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: var(--gold);
+  line-height: 1;
+}
+
+nav ul {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+nav ul a {
+  color: var(--text);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: .78rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  transition: color .3s;
+}
+
+nav ul a:hover {
+  color: var(--gold);
+}
+
+nav .cta {
+  padding: .7rem 1.6rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: .75rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .4s;
+  background: transparent;
+}
+
+nav .cta:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+@media (max-width: 768px) {
+  nav ul { display: none; }
+  nav { padding: 1rem 1.2rem; }
+  nav .brand { font-size: 2rem; }
+}
